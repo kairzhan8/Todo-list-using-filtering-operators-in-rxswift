@@ -74,7 +74,7 @@
         <!--Add Task-->
         <scene sceneID="N6R-RX-uVp">
             <objects>
-                <viewController id="78L-Mc-RFC" sceneMemberID="viewController">
+                <viewController id="78L-Mc-RFC" customClass="AddTaskViewController" customModule="Todo_list_using_filtering_operators_in_rxswift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIR-S3-vuj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,8 +106,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Task" id="Wc1-T2-qex">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cOR-Dr-HPD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cOR-Dr-HPD">
+                            <connections>
+                                <action selector="saveTask" destination="78L-Mc-RFC" id="LDR-IX-oJR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="prioritySegmentedControl" destination="am3-rB-l5K" id="aXX-MG-GyL"/>
+                        <outlet property="titleTaskTextField" destination="ldl-M8-xrB" id="V5c-GB-rJh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL1-6P-c8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
