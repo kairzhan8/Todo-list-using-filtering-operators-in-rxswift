@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		55ADCE8525E61112003D3F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADCE8425E61112003D3F3A /* AppDelegate.swift */; };
 		55ADCE8725E61112003D3F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADCE8625E61112003D3F3A /* SceneDelegate.swift */; };
-		55ADCE8925E61112003D3F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADCE8825E61112003D3F3A /* ViewController.swift */; };
 		55ADCE8C25E61112003D3F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADCE8A25E61112003D3F3A /* Main.storyboard */; };
 		55ADCE8E25E61113003D3F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55ADCE8D25E61113003D3F3A /* Assets.xcassets */; };
 		55ADCE9125E61113003D3F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ADCE8F25E61113003D3F3A /* LaunchScreen.storyboard */; };
+		55ADCEA025E61F65003D3F3A /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ADCE9F25E61F65003D3F3A /* TaskListViewController.swift */; };
+		642EC445D20C41D73401BB4E /* Pods_Todo_list_using_filtering_operators_in_rxswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC41060ED15107F3D11904A /* Pods_Todo_list_using_filtering_operators_in_rxswift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FADE283DC56ECAC3BB655E /* Pods-Todo list using filtering operators in rxswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo list using filtering operators in rxswift.debug.xcconfig"; path = "Target Support Files/Pods-Todo list using filtering operators in rxswift/Pods-Todo list using filtering operators in rxswift.debug.xcconfig"; sourceTree = "<group>"; };
+		2EC41060ED15107F3D11904A /* Pods_Todo_list_using_filtering_operators_in_rxswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_list_using_filtering_operators_in_rxswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADCE8125E61112003D3F3A /* Todo list using filtering operators in rxswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo list using filtering operators in rxswift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55ADCE8425E61112003D3F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55ADCE8625E61112003D3F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55ADCE8825E61112003D3F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55ADCE8B25E61112003D3F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55ADCE8D25E61113003D3F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55ADCE9025E61113003D3F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55ADCE9225E61113003D3F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55ADCE9F25E61F65003D3F3A /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		5AF85E001EE2986A5DACA1E8 /* Pods-Todo list using filtering operators in rxswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo list using filtering operators in rxswift.release.xcconfig"; path = "Target Support Files/Pods-Todo list using filtering operators in rxswift/Pods-Todo list using filtering operators in rxswift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642EC445D20C41D73401BB4E /* Pods_Todo_list_using_filtering_operators_in_rxswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				55ADCE8325E61112003D3F3A /* Todo list using filtering operators in rxswift */,
 				55ADCE8225E61112003D3F3A /* Products */,
+				B22EA8BEFDAECD435DBDAFB6 /* Pods */,
+				9F701D0FABC0675DF3DAFB0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,40 @@
 		55ADCE8325E61112003D3F3A /* Todo list using filtering operators in rxswift */ = {
 			isa = PBXGroup;
 			children = (
+				55ADCE9E25E61F4D003D3F3A /* Controllers */,
 				55ADCE8425E61112003D3F3A /* AppDelegate.swift */,
 				55ADCE8625E61112003D3F3A /* SceneDelegate.swift */,
-				55ADCE8825E61112003D3F3A /* ViewController.swift */,
 				55ADCE8A25E61112003D3F3A /* Main.storyboard */,
 				55ADCE8D25E61113003D3F3A /* Assets.xcassets */,
 				55ADCE8F25E61113003D3F3A /* LaunchScreen.storyboard */,
 				55ADCE9225E61113003D3F3A /* Info.plist */,
 			);
 			path = "Todo list using filtering operators in rxswift";
+			sourceTree = "<group>";
+		};
+		55ADCE9E25E61F4D003D3F3A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55ADCE9F25E61F65003D3F3A /* TaskListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F701D0FABC0675DF3DAFB0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC41060ED15107F3D11904A /* Pods_Todo_list_using_filtering_operators_in_rxswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B22EA8BEFDAECD435DBDAFB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01FADE283DC56ECAC3BB655E /* Pods-Todo list using filtering operators in rxswift.debug.xcconfig */,
+				5AF85E001EE2986A5DACA1E8 /* Pods-Todo list using filtering operators in rxswift.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55ADCE9525E61113003D3F3A /* Build configuration list for PBXNativeTarget "Todo list using filtering operators in rxswift" */;
 			buildPhases = (
+				A2A69FA060B2A7E82F26E262 /* [CP] Check Pods Manifest.lock */,
 				55ADCE7D25E61112003D3F3A /* Sources */,
 				55ADCE7E25E61112003D3F3A /* Frameworks */,
 				55ADCE7F25E61112003D3F3A /* Resources */,
+				443B5A5B2AE795396701472C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +166,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		443B5A5B2AE795396701472C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todo list using filtering operators in rxswift/Pods-Todo list using filtering operators in rxswift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todo list using filtering operators in rxswift/Pods-Todo list using filtering operators in rxswift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Todo list using filtering operators in rxswift/Pods-Todo list using filtering operators in rxswift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A69FA060B2A7E82F26E262 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Todo list using filtering operators in rxswift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55ADCE7D25E61112003D3F3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55ADCE8925E61112003D3F3A /* ViewController.swift in Sources */,
 				55ADCE8525E61112003D3F3A /* AppDelegate.swift in Sources */,
 				55ADCE8725E61112003D3F3A /* SceneDelegate.swift in Sources */,
+				55ADCEA025E61F65003D3F3A /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +359,7 @@
 		};
 		55ADCE9625E61113003D3F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01FADE283DC56ECAC3BB655E /* Pods-Todo list using filtering operators in rxswift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +379,7 @@
 		};
 		55ADCE9725E61113003D3F3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF85E001EE2986A5DACA1E8 /* Pods-Todo list using filtering operators in rxswift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
