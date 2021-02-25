@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxRelay
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,6 +15,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
+    private var tasks = BehaviorRelay<[Task]>(value: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,12 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
             }
         addTaskVC.taskSubjectObservable
             .subscribe(onNext: { task in
-                print(task)
+                
+                let priority = Priority(rawValue: self.prioritySegmentedControl.selectedSegmentIndex - 1)
+                
+                var existingTasks = self.tasks.value
+                existingTasks.append(task)
+                self.tasks.accept(existingTasks)
             }).disposed(by: disposeBag)
     }
 }
