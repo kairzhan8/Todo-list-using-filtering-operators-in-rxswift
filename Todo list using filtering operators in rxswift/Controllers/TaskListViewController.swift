@@ -24,28 +24,25 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return filteredTasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = filteredTasks[indexPath.row].title
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navC = segue.destination as? UINavigationController,
               let addTaskVC = navC.viewControllers.first as? AddTaskViewController else {
-                fatalError("Controller not found")
-            }
+            fatalError("Controller not found")
+        }
         addTaskVC.taskSubjectObservable
-            .subscribe(onNext: { [unowned self] task in
-                
-                let priority = Priority(rawValue: self.prioritySegmentedControl.selectedSegmentIndex - 1)
-                
-                var existingTasks = self.tasks.value
-                existingTasks.append(task)
-                self.tasks.accept(existingTasks)
-                filterTasks(by: priority)
+            .subscribe(onNext: { [weak self] task in
+                var existingTasks = self?.tasks.value
+                existingTasks?.append(task)
+                self?.tasks.accept(existingTasks!)
             }).disposed(by: disposeBag)
     }
     
@@ -54,15 +51,20 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         filterTasks(by: priority)
     }
     
+    private func updateTableView() {
+        tableView.reloadData()
+    }
+    
     private func filterTasks(by priority: Priority?) {
         if priority == nil {
-            self.filteredTasks = self.tasks.value
+            filteredTasks = tasks.value
+            updateTableView()
         } else {
-            self.tasks.map { tasks in
-                return tasks.filter { $0.priority == priority!}
+            tasks.map { tasks in
+                return tasks.filter { $0.priority == priority! }
             }.subscribe(onNext: { [weak self] tasks in
                 self?.filteredTasks = tasks
-                print(tasks)
+                self?.updateTableView()
             }).disposed(by: disposeBag)
         }
     }
